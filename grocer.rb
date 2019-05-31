@@ -17,7 +17,7 @@ COUPONS = [
 ]
 
 def consolidate_cart(cart)
-  cart.uniq.map { |e| e.merge {count: cart.count(e)} }
+  cart.uniq.map { |e| e.merge({:count => cart.count(e)}) }
 end
 
 def apply_coupons(cart, coupons)

@@ -21,7 +21,7 @@ def consolidate_cart(cart)
 end
 
 def apply_coupons(cart, coupons)
-  for coupon in COUPONS do
+  for coupon in coupons do
     item = coupon[:item]
     num = coupon[:num]
 
